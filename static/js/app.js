@@ -54,9 +54,7 @@ function filterTable() {
     
     // 9. Loop through all of the filters and keep any data that matches the filter values
     for (var i=0; i<(keys.length); i++){
-      console.log(keys[i], values[i]);
-      filteredData = filteredData.filter(row => row[`${keys[i]}`] == values[i]);
-      
+      filteredData = filteredData.filter(row => row[keys[i]] == values[i]);
     }
 
     // 10. Finally, rebuild the table using the filtered data
